@@ -5,6 +5,12 @@ var employeeSchema = new mongoose.Schema({
         type: String,
         required: 'This field is required.'
     },
+    empID: {
+        type: Number
+    },
+    designation: {
+        type: String
+    },
     email: {
         type: String
     },
@@ -12,6 +18,24 @@ var employeeSchema = new mongoose.Schema({
         type: String
     },
     city: {
+        type: String
+    },
+    systemType: {
+        type: String
+    },
+    ram: {
+        type: String
+    },
+    storage: {
+        type: String
+    },
+    serialNum:{
+        type: String
+    },
+    systemPassword: {
+        type: String
+    },
+    chipset:{
         type: String
     }
 });

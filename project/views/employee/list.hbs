@@ -1,24 +1,40 @@
-<h3><a class="btn btn-secondary" href="/employee"><i class="fa fa-plus"></i> Create New</a> Employee List</h3>
-<table class="table table-striped">
+<h3 align="center">SYSTEM DETAILS <i class="fa fa-desktop" aria-hidden="true"></i> <a class="btn btn-primary" href="/employee"><i class="fa fa-plus"></i> </a> </h3>
+<table class="table table-responsive table-striped table-dark">
     <thead>
         <tr>
-            <th>Full Name</th>
+               <th>Employee ID</th>
+            <th>Employee Name</th>
+         <th>Designation</th>
             <th>Email</th>
             <th>Mobile</th>
             <th>City</th>
+            <th>System Type</th>
+            <th>RAM</th>
+            <th>Storage</th>
+            <th>Serial Number</th>
+            <th>System Password</th>
+            <th>Chipset</th>
             <th></th>
         </tr>
     </thead>
     <tbody>
         {{#each list}}
         <tr>
-            <td>{{this.fullName}}</td>
+              <td>{{this.empID}}</td>
+            <td class="table-success" style="color: black;">{{this.fullName}}</td>
+            <td>{{this.designation}}</td>
             <td>{{this.email}}</td>
-            <td>{{this.mobile}}</td>
+            <td>*******</td>
             <td>{{this.city}}</td>
+            <td>{{this.systemType}}</td>
+            <td>{{this.ram}}</td>
+            <td>{{this.storage}}</td>
+            <td>{{this.serialNum}}</td>
+            <td style="color: black;">{{this.systemPassword}}</td>
+            <td>{{this.chipset}}</td>
             <td>
                 <a href="/employee/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
-                <a href="/employee/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+                <a href="/employee/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" style="color:red" aria-hidden="true"></i></a>
             </td>
         </tr>
         {{/each}}
