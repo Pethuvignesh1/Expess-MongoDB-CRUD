@@ -9,6 +9,8 @@ router.get('/', (req, res) => {
     });
 });
 
+
+
 router.post('/', (req, res) => {
     if (req.body._id == '')
         insertRecord(req, res);
@@ -114,5 +116,9 @@ router.get('/delete/:id', (req, res) => {
         else { console.log('Error in employee delete :' + err); }
     });
 });
+
+router.get('/about', function (req, res) {
+    res.send('About this wiki');
+  })
 
 module.exports = router;
