@@ -16,7 +16,7 @@ app.engine('hbs', exphbs({ extname: 'hbs', defaultLayout: 'mainLayout', layoutsD
 app.set('view engine', 'hbs');
 
 app.listen(3000, () => {
-    console.log('Express server started at port : 3000');
+    console.log('Express server started on port : 3000');
 });
 
 app.use('/employee', employeeController);
